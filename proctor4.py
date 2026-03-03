@@ -449,7 +449,7 @@ def send_hr_email(user_id):
 
         resend.Emails.send({
             "from": "onboarding@resend.dev",
-            "to": ["tliaravind@gmail.com"]#["roopamugappa@gmail.com"],
+            "to": ["tliaravind@gmail.com"],#["roopamugappa@gmail.com"],
             "subject": f"Python Exam Submission: {candidate['name']}",
             "text": text_body,
             "html": html_body,
@@ -1602,3 +1602,4 @@ async def submit(
         import traceback
         trace = traceback.format_exc()
         return HTMLResponse(f"<h3>Oops, error occurred during submission.<br>Error: {e}</h3><pre>{trace}</pre>", status_code=500)
+
